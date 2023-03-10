@@ -16,6 +16,13 @@ class Task extends Equatable {
     isDeleted = isDeleted ?? false;
   }
 
+  @override
+  List<Object?> get props => [
+        title,
+        isDone,
+        isDeleted,
+      ];
+
   Task copyWith({
     String? title,
     bool? isDone,
@@ -43,11 +50,4 @@ class Task extends Equatable {
       isDeleted: map['isDeleted'] != null ? map['isDeleted'] as bool : null,
     );
   }
-
-  @override
-  List<Object?> get props => [
-        title,
-        isDone,
-        isDeleted,
-      ];
 }

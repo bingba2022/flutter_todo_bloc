@@ -1,5 +1,6 @@
 part of 'tasks_bloc.dart';
 
+// 상태 정의
 class TasksState extends Equatable {
   final List<Task> doingTasks;
   final List<Task> doneTasks;
@@ -29,7 +30,7 @@ class TasksState extends Equatable {
         ),
       ),
       doneTasks: List<Task>.from(
-        (map['Tasks'] as List<int>).map<Task>(
+        (map['doneTasks'] as List<int>).map<Task>(
           (x) => Task.fromMap(x as Map<String, dynamic>),
         ),
       ),
